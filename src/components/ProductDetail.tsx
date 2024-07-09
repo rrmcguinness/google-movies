@@ -2,6 +2,7 @@ import { Grid, Stack, Box, Card, CardMedia, CardHeader, CardContent, TextField, 
 import { useContext } from "react";
 import DemoContext from "../context/DemoContext";
 import { Movie } from "../model/model";
+import React from "react";
 
 const ProductDetail = ({ product }: { product: Movie }) => {
     const ctx = useContext(DemoContext);
@@ -53,9 +54,7 @@ const ProductDetail = ({ product }: { product: Movie }) => {
             />
 
             <Typography variant="h5">Cast</Typography>
-            <Typography>{product.actors.map(a => <>{a.characterName} ({a.name}), </>)}</Typography>
-            
-
+            <Typography>{product.actors.map((a, idx) => <React.Fragment key={`actor_key_${idx}`}>{a.characterName} ({a.name}), </React.Fragment>)}</Typography>
   
             <Typography variant="h5">Attributes</Typography>
   

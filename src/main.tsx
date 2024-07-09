@@ -1,8 +1,7 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './templates/App.tsx'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import Overview from './pages/Overview.tsx';
 import Step1 from './pages/Step1.tsx';
 import Step2 from './pages/Step2.tsx';
@@ -10,10 +9,15 @@ import Step3 from './pages/Step3.tsx';
 import Settings from './pages/Settings.tsx';
 import Demo from './templates/Demo.tsx';
 
+const ErrorBoundary = () => {
+  return(<><Navigate to="/" /></>)
+}
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorBoundary />,
     children: [
       {
         index: true,

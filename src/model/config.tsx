@@ -53,13 +53,18 @@ export const defaultConfig = (): Config => {
 Example JSON Output: [\${category_model}]
   `.trim()
 
-  conf.promptExtractProductDetail = `Execute the following instructions:
+  conf.promptExtractProductDetail = `
+Category Data:
+\${category_attributes}
+
 - Extract the movie title as the attribute 'name'.
 - Extract a list of actors and actresses and their character names into the attribute 'actors' using {name: "", characterName: ""} as the values
-- Write an enriched movie description including plot and subplots in markdown format for an online catalog as the attribute 'description'.
+- Write an enriched movie description including plot and subplots, visual appeal, emotional appeal, originality and other charactistics important to the movie in markdown format for an online catalog as the attribute 'description'.
 - Write the HTML SEO description and keywords for the product as 'seoHtmlHeader'
-- Extract the movie specific values from the following attributes: \${category_attributes} as a json array named attributeValues like: \${product_attribute_value_model}
-- Example JSON Output: \${product_json}`.trim()
+- Extract the category attribute values in object format: \${product_attribute_value_model} applicable to this movie in an array named attributeValues.
+
+Example output JSON Output: \${product_json}
+`.trim()
   
   conf.promptTranslateProductDetail = `Translate the json values in this JSON Object: \${product_json} from language: \${base_language} to: \${target_language}`.trim()
   
