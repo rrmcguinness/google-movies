@@ -58,7 +58,7 @@ const GeminiLogo = () => {
               color={"white"}
               sx={{ fontFamily: "Google Sans", fontSize: 20 }}
             >
-              Digital Commerce
+              Google @ The Movies
             </Typography>
           </Box>
         </Box>
