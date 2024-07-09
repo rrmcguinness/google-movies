@@ -53,7 +53,8 @@ const ProductDetail = ({ product }: { product: Movie }) => {
             />
 
             <Typography variant="h5">Cast</Typography>
-            {product.actors.map(a => <Typography>{a.characterName} ({a.name}),</Typography>)}
+            <Typography>{product.actors.map(a => <>{a.characterName} ({a.name}), </>)}</Typography>
+            
 
   
             <Typography variant="h5">Attributes</Typography>

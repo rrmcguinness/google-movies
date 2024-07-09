@@ -20,7 +20,7 @@ const Step1 = () => {
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Stack>
           <Typography variant="h5" sx={{ mb: 2 }}>
-            Select an potential product image
+            Select a movie.
           </Typography>
           <Grid container spacing={2} maxWidth={"800px"}>
             <ImageCard title="Classics" img={back_to_the_future} />

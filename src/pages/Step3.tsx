@@ -178,7 +178,7 @@ const Step3 = () => {
       <Grid container spacing={2} padding={2}>
         <Grid item xs={6}>
           <Typography variant="h5">
-            Preview, Edit / Approve Product Detail
+            Preview, Edit / Approve Movie Details
           </Typography>
         </Grid>
         <Grid item xs={6}>
