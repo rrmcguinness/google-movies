@@ -17,11 +17,11 @@ const ProductDetail = ({ product }: { product: Movie }) => {
                   sx={{ height: "200px", mb: 0, pb: 0 }}
                   image={ctx.image.uri}
                 />
-                <CardHeader title="SEO" />
+                <CardHeader title="Keywords" />
                 <CardContent>
                   <TextField
                     fullWidth
-                    label="SEO Header"
+                    label="Keywords Header"
                     InputLabelProps={{ shrink: true }}
                     multiline
                     rows={5}
